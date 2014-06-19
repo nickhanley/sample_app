@@ -3,6 +3,7 @@ ruby '2.1.1'
 #ruby-gemset=ruby-2.1.1@rails405
 
 gem 'rails', '4.0.5'
+## gem 'pg', '0.15.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
