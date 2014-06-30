@@ -76,7 +76,7 @@ describe "Authentication" do
           specify { expect(response).to redirect_to(signin_path) }
         end
       end
-      
+
       describe "In the Microposts controller" do
 
         describe "submitting to the create action" do
