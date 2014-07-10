@@ -15,6 +15,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    # allow json responses to retrieve all posts.
+    respond_to do |format|
+      format.html
+      format.json do
+        @microposts = @user.microposts
+        render json: @microposts
+      end
+    end
   end
 
   def create
